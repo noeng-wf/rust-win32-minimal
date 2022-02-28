@@ -1,3 +1,12 @@
+//
+// Standard build command 'cargo build' works. But size of executable can be further reduced
+// by buiding with additional linker options:
+//
+// cargo rustc -- -C link-args="/DEBUG:NONE /ALIGN:16"
+// or
+// cargo rustc --release -- -C link-args="/DEBUG:NONE /ALIGN:16"
+//
+
 #![no_std]
 #![no_main]
 #![windows_subsystem = "console"]
