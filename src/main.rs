@@ -1,7 +1,3 @@
-//
-// Must be compiled with: cargo rustc -- -C link-args="/ENTRY:_start"
-//
-
 #![no_std]
 #![no_main]
 #![windows_subsystem = "console"]
@@ -13,7 +9,7 @@ use winapi::um::processthreadsapi::ExitProcess;
 use winapi::um::winbase::STD_OUTPUT_HANDLE;
 
 #[no_mangle]
-pub extern "C" fn _start() -> () {
+pub extern "C" fn mainCRTStartup() -> () {
     const HELLO: &'static str = "Hello, world!\r\n"; // Length 15
     let bytes_to_write: u32 = HELLO.len() as u32;
     let mut bytes_written: u32 = 0;
