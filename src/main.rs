@@ -1,6 +1,6 @@
 //
 // Standard build command 'cargo build' works. But size of executable can be further reduced
-// by buiding with additional linker options:
+// by building with additional linker options:
 //
 // cargo rustc -- -C link-args="/DEBUG:NONE /ALIGN:16"
 // or
