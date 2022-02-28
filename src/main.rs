@@ -10,7 +10,7 @@ use winapi::um::winbase::STD_OUTPUT_HANDLE;
 
 #[no_mangle]
 pub extern "C" fn mainCRTStartup() -> () {
-    const HELLO: &'static str = "Hello, world!\r\n"; // Length 15
+    const HELLO: &str = "Hello, world!\r\n"; // Length 15
     let bytes_to_write: u32 = HELLO.len() as u32;
     let mut bytes_written: u32 = 0;
 
